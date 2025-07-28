@@ -22,21 +22,12 @@
             android:layout_marginEnd="24dp"
             android:src="@drawable/partly_cloudy_day"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:text="Consulter la météo d'aujourd'hui" />
 
         <Button
             android:id="@+id/buttonWeatherByLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Par rapport à votre localisation"
+            android:text="Get Weather by Location"
             android:backgroundTint="@color/white"
             android:textColor="@color/blue"
             android:textSize="20sp"
@@ -50,7 +41,7 @@
             android:id="@+id/buttonWeatherByCity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pour une ville"
+            android:text="Get Weather by City Name"
             android:backgroundTint="@color/white"
             android:textColor="@color/blue"
             android:textSize="20sp"
