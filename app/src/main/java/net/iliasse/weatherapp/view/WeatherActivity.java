@@ -8,6 +8,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -61,8 +62,41 @@ public class WeatherActivity extends AppCompatActivity {
         });
 
         weatherBinding.search.setOnClickListener(v -> {
-
+            getWeatherDataByCityName();
         });
+
+        //to refresh and update data
+        weatherBinding.refreshLayout.setOnRefreshListener(() -> {
+            if(prefer.equals(Constants.byLocation)){
+                getWeatherDataByLocation();
+            }
+            else{
+                getWeatherDataByCityName();
+            }
+
+            weatherBinding.refreshLayout.setRefreshing(false);
+        });
+    }
+
+    public void getWeatherDataByCityName(){
+        String cityName = weatherBinding.editTextCityName.getText().toString();
+        if(cityName.isEmpty()){
+            Toast.makeText(this, "Please entre a city name", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            weatherViewModel.getProgressBarLiveData().observe(WeatherActivity.this, progressState -> {
+                if(progressState){
+                    weatherBinding.progressBarWeatherData.setVisibility(View.VISIBLE);
+                    weatherBinding.linearLayoutWeatherData.setVisibility(View.INVISIBLE);
+                }
+                else{
+                    weatherBinding.progressBarWeatherData.setVisibility(View.INVISIBLE);
+                }
+            });
+
+            weatherViewModel.sendRequestByCityName(getApplicationContext(), cityName);
+            weatherViewModel.getWeatherResponseLiveData().observe(WeatherActivity.this, this::showWeatherData);
+        }
     }
 
     @SuppressLint("MissingPermission")
