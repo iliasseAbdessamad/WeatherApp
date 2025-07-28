@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/partly_cloudy_day"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:text="Consulter la météo d'aujourd'hui"
+            android:layout_marginTop="50dp" />
+
+        <Button
+            android:id="@+id/buttonWeatherByLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Par rapport à votre localisation"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginBottom="10dp"
+            />
+
+        <Button
+            android:id="@+id/buttonWeatherByCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pour une ville"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginStart="21dp"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
