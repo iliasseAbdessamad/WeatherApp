@@ -14,4 +14,8 @@ public class Constants {
     public static final String byCity = "by city name";
 
     public static final String byLocation = "by location";
+
+    public static final String BASE_URL = "https://api.openweathermap.org/";
+
+    public static final String SUB_URL = "/data/2.5/weather?appid=18f1a6d8db9f3ffa8e1969298a3f7070&units=metric";
 }
