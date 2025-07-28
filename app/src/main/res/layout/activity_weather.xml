@@ -90,6 +90,7 @@
                     android:layout_gravity="center"
                     android:layout_margin="16dp"
                     android:text="Rabat"
+                    android:id="@+id/textViewCityName"
                     android:textColor="@color/white"
                     android:textSize="30sp"/>
 
