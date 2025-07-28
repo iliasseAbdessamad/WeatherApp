@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             //ask for permission, open the second activity
             if(hasFineLocationPermission()){
                 //checks location, get weather data
-            } 
+            }
             else if(hasCoarseLocationPermission()){
                 //bottom sheet dialog for precise location
             }
