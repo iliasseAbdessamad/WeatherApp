@@ -51,7 +51,7 @@ L'utilisateur doit permettre à l'application d'accéder à sa localisation
 
 <br />
 <h4>
-✅ L'utilisateur clique sur "Don't Allow" (ne n'autorise pas l'accès à sa localisation)
+✅ L'utilisateur clique sur "Don't Allow" (il n'autorise pas l'accès à sa localisation)
 </h4>
 <img src="./imgs/screen3.png" alt="image 3" />
 <p>
